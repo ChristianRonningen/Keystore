@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Keystore'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Keystore persists passwords into keychain'
 
 # This description is used to generate tags and improve search results.
@@ -29,15 +29,13 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.3'
 
   s.source_files = 'Keystore/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Keystore' => ['Keystore/Assets/*.png']
-  # }
+
+   s.swift_version = "4.0"
 
    s.test_spec 'Tests' do |test_spec|
       test_spec.source_files = 'Tests/*.swift'
    end
 
-   s.frameworks = 'UIKit', 'MapKit'
-   s.dependency = 'CryptoSwift'
+   s.frameworks = 'Foundation'
+   s.dependency 'CryptoSwift'
 end

@@ -1,7 +1,7 @@
 
 import XCTest
 
-import Pods_Keystore_Example
+import Keystore
 
 class KeystoreTestCase: XCTestCase {
     let account = "account"
