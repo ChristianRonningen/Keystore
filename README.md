@@ -1,6 +1,6 @@
 # Keystore
 
-[![CI Status](https://img.shields.io/travis/Brad Parbs/Keystore.svg?style=flat)](https://travis-ci.org/Brad Parbs/Keystore)
+[![CI Status](https://img.shields.io/travis/christianronningen/Keystore.svg?style=flat)](https://travis-ci.org/christianronningen/Keystore)
 [![Version](https://img.shields.io/cocoapods/v/Keystore.svg?style=flat)](https://cocoapods.org/pods/Keystore)
 [![License](https://img.shields.io/cocoapods/l/Keystore.svg?style=flat)](https://cocoapods.org/pods/Keystore)
 [![Platform](https://img.shields.io/cocoapods/p/Keystore.svg?style=flat)](https://cocoapods.org/pods/Keystore)
@@ -22,7 +22,7 @@ pod 'Keystore'
 
 ## Author
 
-Brad Parbs, brad@bradparbs.com
+Christian Rönningen, christian.ronningen@gmail.com
 
 ## License
 
