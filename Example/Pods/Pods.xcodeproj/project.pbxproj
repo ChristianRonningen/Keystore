@@ -17,7 +17,6 @@
 		15DC1B095402AF093E967210D88B0036 /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7AC4956318CE25E5BA1539D973870 /* SHA3.swift */; };
 		1B4A15E0503D707D7510FF24E82F6494 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1448AA7564E207494DDD568515F7FA /* AES.swift */; };
 		1F2EF2C7A5642B78085A06894A8C609E /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A742366FD3E782EC58B8DBD895DC22 /* CBCMAC.swift */; };
-		204E36FF221566D30013C7D9 /* Keystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E36FE221566760013C7D9 /* Keystore.swift */; };
 		21D7917E96CEAE2AD6934F4F255F62FE /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF2C0531C8660977F8975E036CA583 /* Int+Extension.swift */; };
 		21F686EDB26D8B3E1377A8FDCEFE2123 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAADD522AFE12CF840CAD5DB3C59998 /* UInt8+Extension.swift */; };
 		2A752C2CA3F15E48E4BB08DF66D1AE53 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900783C5C1864C65AC8F0177BF70279 /* CCM.swift */; };
@@ -118,7 +117,6 @@
 		18AF2C0531C8660977F8975E036CA583 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Sources/CryptoSwift/Int+Extension.swift"; sourceTree = "<group>"; };
 		1F7ED0D6A546EE852D8D4D642A69BB61 /* Pods-Keystore_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Keystore_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1FD3471E1C8D5AE4279C82B8C6F2A65B /* Pods-Keystore_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Keystore_Example-resources.sh"; sourceTree = "<group>"; };
-		204E36FE221566760013C7D9 /* Keystore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keystore.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		21C748D148398AC0497E22E19975BF62 /* StreamEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEncryptor.swift; path = Sources/CryptoSwift/StreamEncryptor.swift; sourceTree = "<group>"; };
 		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		276A67294A1AABFE0E7556BBF12C62C5 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/CryptoSwift/MD5.swift; sourceTree = "<group>"; };
@@ -333,7 +331,6 @@
 		DE3A87DDEACE285FD81959B808C9BFBF /* Keystore */ = {
 			isa = PBXGroup;
 			children = (
-				204E36FE221566760013C7D9 /* Keystore.swift */,
 				1168377FE0A943B4B9219E1F121B1A0A /* Pod */,
 			);
 			name = Keystore;
@@ -609,7 +606,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9ABA5C92D6C0167FEE1CE387A8B0C93 /* Pods-Keystore_Example-dummy.m in Sources */,
-				204E36FF221566D30013C7D9 /* Keystore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
