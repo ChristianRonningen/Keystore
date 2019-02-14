@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Keystore'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Keystore.'
+  s.version          = '0.1.1'
+  s.summary          = 'Keystore persists passwords into keychain'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Test pod for for handling passwords in keystore
+  Test pod for for handling passwords in keychain
   DESC
 
   s.homepage         = 'https://github.com/ChristianRonningen'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Christian Rönningen' => '' }
   s.source           = { :git => 'https://github.com/ChristianRonningen/Keystore.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
@@ -36,7 +34,10 @@ Pod::Spec.new do |s|
   #   'Keystore' => ['Keystore/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+s.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'Tests/*.swift'
+end
+
+   s.frameworks = 'UIKit', 'MapKit'
    s.dependency 'CryptoSwift'
 end
