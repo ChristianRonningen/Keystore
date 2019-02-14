@@ -1,50 +1,41 @@
-// https://github.com/Quick/Quick
 
-import Quick
-import Nimble
-import Keystore
+import XCTest
 
-class TableOfContentsSpec: QuickSpec {
-    override func spec() {
-        describe("these will fail") {
+import Pods_Keystore_Example
 
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
-            }
-        }
+class KeystoreTestCase: XCTestCase {
+    let account = "account"
+    let password = "password123"
+    
+    let keystore = Keystore(accessGroup: nil)
+    
+    override func tearDown() {
+        super.tearDown()
+        
+        _ = keystore.deletePassword(for: account)
+    }
+    
+    override func setUp() {
+        super.setUp()
+        
+        _ = keystore.deletePassword(for: account)
+    }
+    
+    func testSavePassword() {
+        XCTAssertEqual(keystore.savePassword(password, for: account), KeystoreResult.success(nil))
+        XCTAssertEqual(keystore.retrievePassword(for: account), KeystoreResult.success(password))
+    }
+    
+    func testSaveEncryptedPassword() {
+        XCTAssertEqual(keystore.encryptAndSavePassword(password, salt: Array("salt".utf8), for: account), KeystoreResult.success(nil))
+        XCTAssertFalse(keystore.retrievePassword(for: account).isError)
+    }
+    
+    func testSaveEmptyPasswordShouldReturnError() {
+        XCTAssertEqual(keystore.savePassword("", for: account), KeystoreResult.error(-1))
+    }
+    
+    func testSaveEmptyEncryptedPassword() {
+        XCTAssertEqual(keystore.encryptAndSavePassword("", salt: nil, for: account), KeystoreResult.error(-1))
     }
 }
